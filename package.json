@@ -1,0 +1,13 @@
+{
+  "name": "Nodejs",
+  "version": "1.0.0",
+  "description": "Node.js progress",
+  "main": "index.js",
+  "repository": "https://github.com/i-ice-bear/Nodejs-progress.git",
+  "author": "ice-bear <andydowsen47us@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.1",
+    "nodemon": "^2.0.19"
+  }
+}
