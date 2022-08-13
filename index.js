@@ -1,6 +1,6 @@
-const readDatas = require("./JS/readfile")
+const readData = require("./JS/readfile")
 
-const readData = readDatas.readfiles();
+const readData = readData.readfiles();
 console.log(readData)
 
 
