@@ -1,5 +1,4 @@
 const myEmitter = require("node:events");
-
 const eventEmitter = new myEmitter();
 
 eventEmitter.on("Scream", () => {
