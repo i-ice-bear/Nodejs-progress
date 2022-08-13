@@ -39,11 +39,10 @@ Don't worry stay happy 😊
 
 ## Features
 
-- Light/dark mode toggle
-- Live previews
 - Instant runtime
-- Build in Next.js
+- Build in Node.js
 - Cross platform
+- Code already prepared alot.
 
 
 ## 🛠 Skills 
