@@ -26,7 +26,7 @@ Sometimes it's also being annoying for me 😑 when someone saw me to sucking st
 
 ## Authors
 
-- [@Anshu (Only me)](https://www.github.com/i-ice-bear)
+- [@Anshu (Only me)](https://www.github.com/i-ice-bear) - Bcuz, i'm single 
 
 
 ## Demo
