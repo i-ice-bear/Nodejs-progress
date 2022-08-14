@@ -1,6 +1,6 @@
-const readData = require("./JS/readfile")
+require("dotenv").config();
 
-const readData = readData.readfiles();
-console.log(readData)
-
+const userKey = process.env.USER_KEY;
+const userData = process.env.USER_ID;
+console.log(userData,userKey)
 
