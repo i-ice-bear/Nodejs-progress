@@ -1,7 +1,6 @@
 const axois = require("axios");
 const eventEmitter = require("events");
 const fs = require("fs");
-
 const eventManager = new eventEmitter();
 
 async function asyncFetch() {
