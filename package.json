@@ -1,5 +1,5 @@
 {
-  "name": "Nodejs",
+  "name": "nodejs",
   "version": "1.0.0",
   "description": "Node.js progress",
   "main": "index.js",
@@ -12,5 +12,8 @@
     "express": "^4.18.1",
     "nodemon": "^2.0.19",
     "sass": "^1.54.4"
+  },
+  "devDependencies": {
+    "node-fetch": "^3.2.10"
   }
 }
