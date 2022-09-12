@@ -10,7 +10,6 @@ const eventEmitter = new eventCommitter();
 if (cluster.isPrimary) {
   console.log(`Process ${process.pid} is running`);
   for (let i = 0; i < numCPUs; i++) {
-    //+ cluster for-each loop
     const element = numCPUs;
     console.log(element);
     cluster.fork();

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data fetch</title>
+</head>
+<body>
+    <div>
+        <h1 id="content"></h1>
+    </div>
+    <script>
+        async function dataFetch(){
+            const dataToFetch = await fetch("https://newsapi.org/v2/everything?q=tesla&from=2022-08-12&sortBy=publishedAt&apiKey=cd6f44f57521402dab39db73fde51eb4");
+            const dataToJson = await dataToFetch.text();
+            console.log(dataToJson);
+            console.log(dataToJson.title)
+            document.querySelector("#content").innerHTML = dataToJson.id;
+        }
+        dataFetch()
+    </script>
+</body>
+</html>
