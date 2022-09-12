@@ -48,7 +48,7 @@ async function handler(req, res, next) {
         .createServer((req, res) => {
           res.statusCode = 200;
           const webString = (fs.readFileSync("html/static.html"));
-          res.end(webString.toString());
+          res.end(webString.toString())
         })
         .listen(3000);
     }
