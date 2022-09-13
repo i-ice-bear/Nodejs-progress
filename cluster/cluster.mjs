@@ -1,59 +1,44 @@
 import * as fs from "fs";
+import { cpus } from "node:os";
 import cluster from "cluster";
-import process from "process";
-import { cpus } from "os";
 import http from "node:http";
-import axios from "axios";
-import { getEnabledCategories } from "trace_events";
+import process from "node:process";
+const cpuNums = cpus().length;
 
-const cpusLength = new cpus().length;
-const sampleUrl =
-  "https://newsapi.org/v2/everything?q=tesla&from=2022-08-12&sortBy=publishedAt&apiKey=cd6f44f57521402dab39db73fde51eb4";
-
-async function handler(req, res, next) {
+async function handlerModel() {
   if (cluster.isPrimary) {
-    console.log(`Process ${process.pid} is running `);
-    for (let cpuAllocation = 0; cpuAllocation < cpusLength; cpuAllocation++) {
-      let content;
-      content = cpusLength;
-      console.log(content);
-      async function forkCluster() {
-        await cluster.fork();
-        const container_length = await fs.promises.readdir("sysinfo");
-        await fs.promises.writeFile(
-          `sysinfo/process-${process.pid}-${container_length + 1}.json`,
-          JSON.stringify(process),
-          (err) => {
-            if (err) {
-              console.log(err);
-            } else {
-              console.log(`Cluster : ${cluster} forked`);
-            }
+    const directoryLength = await fs.promises.readdir("sysinfo");
+    console.log(`Process ${process.pid} running`);
+    for (let index = 0; index < cpuNums; index++) {
+      console.log(cpuNums);
+      setTimeout(() => {
+        cluster.fork();
+      }, 2000);
+      const processList = await cpus.toString()
+      fs.promises.writeFile(
+        `sysinfo/process-log-${directoryLength + 1}.json`,
+        JSON.stringify(processList),
+        (err, data) => {
+          if (err) {
+            console.log(err);
+          } else {
+            console.log("Worker generated successfully");
           }
-        );
-      }
-      forkCluster();
+        }
+      );
     }
-    async function extiCluster() {
-      await cluster.on("Exit from cluster", (worker, code, signal) => {
-        console.log(
-          `command failed with exit code ${worker.process.pid} Worker : ${worker} | Signal : ${signal} | Code : ${code}`
-        );
-      });
-    }
-    extiCluster();
+    cluster.on("exit", (worker, code, signal) => {
+      console.log(`process ${worker.process.pid} exited with code ${code}`);
+    });
   } else {
-    async function createServer() {
-      await http
-        .createServer((req, res) => {
-          res.statusCode = 200;
-          const webString = (fs.readFileSync("html/static.html"));
-          res.end(webString.toString())
-        })
-        .listen(3000);
-    }
-    createServer();
+    http
+      .createServer((req, res) => {
+        res.statusCode = 200;
+        const htmlPage = fs.readFileSync("html/static.html");
+        res.end(htmlPage.toString());
+      })
+      .listen(3000);
   }
 }
 
-handler();
+handlerModel();
