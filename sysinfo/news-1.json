@@ -1,0 +1,47 @@
+{
+  "results": [
+    {
+      "gender": "male",
+      "name": { "title": "Mr", "first": "Cengizhan", "last": "Hardy" },
+      "location": {
+        "street": { "number": 4161, "name": "Henriettewaard" },
+        "city": "Zeelst",
+        "state": "Friesland",
+        "country": "Netherlands",
+        "postcode": "2775 BI",
+        "coordinates": { "latitude": "31.6503", "longitude": "-52.0614" },
+        "timezone": {
+          "offset": "-7:00",
+          "description": "Mountain Time (US & Canada)"
+        }
+      },
+      "email": "cengizhan.hardy@example.com",
+      "login": {
+        "uuid": "2426bf3a-dd55-4acd-a7fe-c61271eacfa3",
+        "username": "yellowtiger795",
+        "password": "jesse",
+        "salt": "2YtuQUYi",
+        "md5": "5c92dc1c299f81f3565dece5e2ee6d19",
+        "sha1": "e07854d226ff9549efe532e00daa8111e9b802bc",
+        "sha256": "0c89b3c16e7c19cd8b685222555cda765cfe8dd77a3ffc36a1277e48c1508435"
+      },
+      "dob": { "date": "1969-05-09T15:24:59.182Z", "age": 53 },
+      "registered": { "date": "2004-06-23T19:32:34.295Z", "age": 18 },
+      "phone": "(0073) 699720",
+      "cell": "(06) 54344771",
+      "id": { "name": "BSN", "value": "36407828" },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/16.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/16.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/16.jpg"
+      },
+      "nat": "NL"
+    }
+  ],
+  "info": {
+    "seed": "9ef0913eb6ed0e8d",
+    "results": 1,
+    "page": 1,
+    "version": "1.4"
+  }
+}
